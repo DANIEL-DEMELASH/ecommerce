@@ -1,3 +1,4 @@
+import 'package:ecommerce/screens/user_info.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Colors.white,
         title: const Text(
-          'Fake Store',
+          'E-Commerce',
           style: TextStyle(color: Colors.orange),
         ),
         centerTitle: true,
@@ -38,9 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
       const AllProductsScreen(),
       const AllCategoriesScreen(),
       // const CartScreen(),
-      // const UserScreen()
       const Scaffold(),
-      const Scaffold(),
+      const UserInfoScreen(),
     ];
     return IndexedStack(
       index: _currentIndex,

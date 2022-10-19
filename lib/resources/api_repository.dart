@@ -1,4 +1,5 @@
 import '../models/product.dart';
+import '../models/user.dart';
 import 'api_provider.dart';
 
 class ApiRepository {
@@ -13,6 +14,10 @@ class ApiRepository {
 
   Future<List<Product>> getProductsByCategory(category) {
     return _apiProvider.getProductsByCategory(category);
+  }
+
+  Future<User> getUserInfo() {
+    return _apiProvider.getUserInfo();
   }
 }
 
