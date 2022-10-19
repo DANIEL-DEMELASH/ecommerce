@@ -18,17 +18,7 @@ class ProductsListLoaded extends ProductsListState {
   ProductsListLoaded(this.products);
 }
 
-class SingleProductLoaded extends ProductsListState {
-  final Product product;
-  SingleProductLoaded(this.product);
-}
-
 class ProductsListError extends ProductsListState {
   final String error;
   ProductsListError(this.error);
-}
-
-class SingleProductError extends ProductsListState {
-  final String error;
-  SingleProductError(this.error);
 }

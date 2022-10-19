@@ -1,15 +1,9 @@
-// import 'package:fake_store/screens/all_categories.dart';
-// import 'package:fake_store/screens/all_products_screen.dart';
-// import 'package:fake_store/screens/cart_screen.dart';
-// import 'package:fake_store/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
 import '../widgets/custom_bottom_bar.dart';
 import 'all_categories.dart';
 import 'all_products.dart';
-
-TextEditingController searchController = TextEditingController();
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -45,8 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
       const AllCategoriesScreen(),
       // const CartScreen(),
       // const UserScreen()
-      // const Scaffold(),
-      const Scaffold(),
       const Scaffold(),
       const Scaffold(),
     ];

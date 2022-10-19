@@ -25,17 +25,18 @@ class ProductsListBloc extends Bloc<ProductsListEvent, ProductsListState> {
       },
     );
 
-    // on<GetAllProducts>(
-    //   (event, emit) async {
-    //     try {
-    //       emit(ProductsListLoading());
-    //       final products = await apiRepository.getAllProducts();
-    //       emit(ProductsListLoaded(products));
-    //     } on NetworkError {
-    //       emit(ProductsListError(
-    //           'failed to fetch data. is your device online?'));
-    //     }
-    //   },
-    // );
+    on<GetProductsByCategory>(
+      (event, emit) async {
+        try {
+          emit(ProductsListLoading());
+          final products =
+              await apiRepository.getProductsByCategory(event.category);
+          emit(ProductsListLoaded(products));
+        } on NetworkError {
+          emit(ProductsListError(
+              'failed to fetch data. is your device online?'));
+        }
+      },
+    );
   }
 }

@@ -10,8 +10,8 @@ abstract class ProductsListEvent extends Equatable {
 
 class GetAllProducts extends ProductsListEvent {}
 
-class GetSingleProduct extends ProductsListEvent {
-  final int id;
+class GetProductsByCategory extends ProductsListEvent {
+  final String category;
 
-  GetSingleProduct({required this.id});
+  GetProductsByCategory({required this.category});
 }

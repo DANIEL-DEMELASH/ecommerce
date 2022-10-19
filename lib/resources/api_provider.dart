@@ -36,4 +36,20 @@ class ApiProvider {
       throw Exception(e);
     }
   }
+
+  Future<List<Product>> getProductsByCategory(category) async {
+    http.Response response;
+    try {
+      response = await http.get(
+        Uri.parse('$baseUrl/products/category/$category'),
+      );
+      List<Product> products = (jsonDecode(response.body) as List)
+          .map((e) => Product.fromJson(e))
+          .toList();
+      return products;
+    } catch (e) {
+      debugPrint(e.toString());
+      throw Exception(e);
+    }
+  }
 }

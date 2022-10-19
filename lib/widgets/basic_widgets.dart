@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/product.dart';
 import '../screens/product_detail.dart';
+import '../screens/products_by_category.dart';
 
 Widget displayProducts(List<Product> products, BuildContext context) {
   return GridView.count(
@@ -68,11 +69,11 @@ Widget displayCategories(List<String> categories, BuildContext context) {
         final String category = categories[index];
         return GestureDetector(
           onTap: () {
-            // Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //         builder: (context) =>
-            //             ProductByCategoryScreen(category: category)));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        ProductByCategoryScreen(category: category)));
           },
           child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
