@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 import '../widgets/custom_bottom_bar.dart';
+import 'all_categories.dart';
 import 'all_products.dart';
 
 TextEditingController searchController = TextEditingController();
@@ -41,10 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget getBody() {
     List<Widget> pages = [
       const AllProductsScreen(),
-      // const AllCategoriesScreen(),
+      const AllCategoriesScreen(),
       // const CartScreen(),
       // const UserScreen()
-      const Scaffold(),
+      // const Scaffold(),
       const Scaffold(),
       const Scaffold(),
       const Scaffold(),
