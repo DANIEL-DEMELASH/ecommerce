@@ -14,6 +14,8 @@ dependencies:
   equatable: ^2.0.5
   http: ^0.13.5
   flutter_rating_bar: ^4.0.1
+  localstore: ^1.2.3
+  fluttertoast: ^8.1.1
 
 dev_dependencies:
   flutter_test:

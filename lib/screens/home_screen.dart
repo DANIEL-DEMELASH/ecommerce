@@ -5,6 +5,7 @@ import '../constants.dart';
 import '../widgets/custom_bottom_bar.dart';
 import 'all_categories.dart';
 import 'all_products.dart';
+import 'cart_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -38,8 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
     List<Widget> pages = [
       const AllProductsScreen(),
       const AllCategoriesScreen(),
-      // const CartScreen(),
-      const Scaffold(),
+      const CartScreen(),
       const UserInfoScreen(),
     ];
     return IndexedStack(

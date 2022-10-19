@@ -1,3 +1,5 @@
+import 'package:localstore/localstore.dart';
+
 class Product {
   int? id;
   String? title;
@@ -61,5 +63,17 @@ class Rating {
     data['rate'] = rate;
     data['count'] = count;
     return data;
+  }
+}
+
+extension ExtTodo on Product {
+  Future save() async {
+    final db = Localstore.instance;
+    return db.collection('products').doc(id.toString()).set(toJson());
+  }
+
+  Future delete() async {
+    final db = Localstore.instance;
+    return db.collection('products').doc(id.toString()).delete();
   }
 }
