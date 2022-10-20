@@ -34,6 +34,35 @@ a basic e-commerce application that retrieves and shows products, allows users t
    flutter run';
    ```
 
+## Screenshots
+
+<table>
+  <tr>
+    <td>All Products Screen</td>
+     <td>Category Screen</td>
+     <td>Products By Category Screen</td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/10.png" width=270 height=500></td>
+    <td><img src="screenshots/9.png" width=270 height=500></td>
+    <td><img src="screenshots/8.png" width=270 height=500></td>
+  </tr>
+ </table>
+ 
+ <table>
+  <tr>
+    <td>Product Detail Screen</td>
+     <td>Cart Screen</td>
+     <td>User Profile Screen</td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/6.png" width=270 height=500></td>
+    <td><img src="screenshots/1.png" width=270 height=500></td>
+    <td><img src="screenshots/2.png" width=270 height=500></td>
+  </tr>
+ </table>
+ 
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
