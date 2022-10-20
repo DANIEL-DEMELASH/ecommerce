@@ -36,7 +36,7 @@ Widget displayProducts(List<Product> products, BuildContext context) {
                     height: MediaQuery.of(context).size.height / 7,
                   ),
                 ),
-                SizedBox(height: 20.0, child: Text(product.title.toString())),
+                SizedBox(height: 18.0, child: Text(product.title.toString())),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
