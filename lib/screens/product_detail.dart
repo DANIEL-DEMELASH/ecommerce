@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce/models/product.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-
-import 'cart_screen.dart';
 
 class ProductDetail extends StatefulWidget {
   const ProductDetail({super.key, required this.product});
@@ -15,8 +12,6 @@ class ProductDetail extends StatefulWidget {
 }
 
 class _ProductDetailState extends State<ProductDetail> {
-  final _items = <String, Product>{};
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,36 +110,7 @@ class _ProductDetailState extends State<ProductDetail> {
         ],
       ),
       bottomNavigationBar: GestureDetector(
-        onTap: () {
-          setState(() {
-            // final id = Localstore.instance.collection('products').doc().id;
-            final item = Product(
-              id: widget.product.id,
-              title: widget.product.title,
-              price: widget.product.price,
-              description: widget.product.description,
-              category: widget.product.category,
-              image: widget.product.image,
-              rating: widget.product.rating,
-              errorMessage: widget.product.errorMessage,
-            );
-            item.save();
-            _items.putIfAbsent(item.id.toString(), () => item);
-            double totalPrice = 0;
-            _items.forEach((key, value) {
-              totalPrice += value.price!;
-            });
-            CartScreen.totalPrice = totalPrice;
-          });
-          Fluttertoast.showToast(
-              msg: "product added to the cart",
-              toastLength: Toast.LENGTH_SHORT,
-              gravity: ToastGravity.CENTER,
-              timeInSecForIosWeb: 1,
-              backgroundColor: Colors.orange,
-              textColor: Colors.white,
-              fontSize: 16.0);
-        },
+        onTap: () {},
         child: Container(
           height: 50,
           width: double.infinity,

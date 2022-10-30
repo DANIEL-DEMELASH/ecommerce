@@ -22,3 +22,9 @@ class ProductsListError extends ProductsListState {
   final String error;
   ProductsListError(this.error);
 }
+
+class SingleProductLoaded extends ProductsListState {
+  final Product product;
+
+  SingleProductLoaded(this.product);
+}

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import '../models/cart.dart';
 import '../models/product.dart';
 import '../models/user.dart';
 
@@ -55,12 +56,40 @@ class ApiProvider {
     }
   }
 
+  Future<Product> getSingleProduct(id) async {
+    http.Response response;
+    try {
+      response = await http.get(
+        Uri.parse('$baseUrl/products/$id'),
+      );
+      Product products = Product.fromJson(jsonDecode(response.body));
+      return products;
+    } catch (e) {
+      debugPrint(e.toString());
+      throw Exception(e);
+    }
+  }
+
   Future<User> getUserInfo() async {
     http.Response response;
     try {
       response = await http.get(Uri.parse('$baseUrl/users/2'));
       User user = User.fromJson(jsonDecode(response.body));
       return user;
+    } catch (e) {
+      debugPrint(e.toString());
+      throw Exception(e);
+    }
+  }
+
+  Future<List<Cart>> getUserCarts() async {
+    http.Response response;
+    try {
+      response = await http.get(Uri.parse('$baseUrl/carts/user/3'));
+      List<Cart> cart = (jsonDecode(response.body) as List)
+          .map((e) => Cart.fromJson(e))
+          .toList();
+      return cart;
     } catch (e) {
       debugPrint(e.toString());
       throw Exception(e);

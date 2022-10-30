@@ -15,3 +15,9 @@ class GetProductsByCategory extends ProductsListEvent {
 
   GetProductsByCategory({required this.category});
 }
+
+class GetProductById extends ProductsListEvent {
+  final int id;
+
+  GetProductById(this.id);
+}

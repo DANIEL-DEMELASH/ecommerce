@@ -1,3 +1,4 @@
+import '../models/cart.dart';
 import '../models/product.dart';
 import '../models/user.dart';
 import 'api_provider.dart';
@@ -16,8 +17,16 @@ class ApiRepository {
     return _apiProvider.getProductsByCategory(category);
   }
 
+  Future<Product> getSingleProduct(id) {
+    return _apiProvider.getSingleProduct(id);
+  }
+
   Future<User> getUserInfo() {
     return _apiProvider.getUserInfo();
+  }
+
+  Future<List<Cart>> getUserCarts() {
+    return _apiProvider.getUserCarts();
   }
 }
 
