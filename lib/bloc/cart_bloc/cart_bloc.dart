@@ -23,5 +23,23 @@ class CartBloc extends Bloc<CartEvent, CartState> {
         }
       },
     );
+
+    on<DeleteCartById>(
+      (event, emit) async {
+        late Cart cart;
+        try {
+          emit(CartLoading());
+          await Future.delayed(const Duration(seconds: 3), () async {
+            cart = await apiRepository.deleteCartById(event.id);
+          });
+          emit(CartDeleted(cart));
+          if (cart.errorMessage != null) {
+            emit(CartError(cart.errorMessage.toString()));
+          }
+        } on NetworkError {
+          emit(CartError('failed to fetch data. is your device online?'));
+        }
+      },
+    );
   }
 }

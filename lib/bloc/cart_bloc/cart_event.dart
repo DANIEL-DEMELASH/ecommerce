@@ -9,3 +9,9 @@ abstract class CartEvent extends Equatable {
 }
 
 class GetUserCarts extends CartEvent {}
+
+class DeleteCartById extends CartEvent {
+  final int id;
+
+  DeleteCartById(this.id);
+}

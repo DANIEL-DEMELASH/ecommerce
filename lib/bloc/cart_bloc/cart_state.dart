@@ -14,8 +14,13 @@ class CartInitial extends CartState {}
 class CartLoading extends CartState {}
 
 class CartLoaded extends CartState {
-  final List<Cart> categories;
-  CartLoaded(this.categories);
+  final List<Cart> carts;
+  CartLoaded(this.carts);
+}
+
+class CartDeleted extends CartState {
+  final Cart cart;
+  CartDeleted(this.cart);
 }
 
 class CartError extends CartState {

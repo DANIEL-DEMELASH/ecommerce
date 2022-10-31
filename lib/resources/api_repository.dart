@@ -28,6 +28,10 @@ class ApiRepository {
   Future<List<Cart>> getUserCarts() {
     return _apiProvider.getUserCarts();
   }
+
+  Future<Cart> deleteCartById(id) {
+    return _apiProvider.deleteCartById(id);
+  }
 }
 
 class NetworkError extends Error {}

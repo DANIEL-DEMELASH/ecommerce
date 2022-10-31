@@ -95,4 +95,16 @@ class ApiProvider {
       throw Exception(e);
     }
   }
+
+  Future<Cart> deleteCartById(id) async {
+    http.Response response;
+    try {
+      response = await http.get(Uri.parse('$baseUrl/carts/$id'));
+      Cart cart = Cart.fromJson(jsonDecode(response.body));
+      return cart;
+    } catch (e) {
+      debugPrint(e.toString());
+      throw Exception(e);
+    }
+  }
 }
