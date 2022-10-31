@@ -59,6 +59,10 @@ a basic e-commerce application that retrieves and shows products, allows users t
     <td><img src="screenshots/2.png" width=270 height=500></td>
   </tr>
   <tr>
+    <td>Carts List Screen</td>
+     <td>Cart Products Screen</td>
+  </tr>
+  <tr>
   <td><img src="screenshots/1.png" width=270 height=500></td>
   <td><img src="screenshots/3.png" width=270 height=500></td>
   </tr>
