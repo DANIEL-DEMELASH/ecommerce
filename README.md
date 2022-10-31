@@ -52,7 +52,6 @@ a basic e-commerce application that retrieves and shows products, allows users t
  <table>
   <tr>
     <td>Product Detail Screen</td>
-     <td>Cart Screen</td>
      <td>User Profile Screen</td>
   </tr>
   <tr>
@@ -60,8 +59,8 @@ a basic e-commerce application that retrieves and shows products, allows users t
     <td><img src="screenshots/2.png" width=270 height=500></td>
   </tr>
   <tr>
-  <td><img src="screenshots/1.jpg" width=270 height=500></td>
-  <td><img src="screenshots/3.jpg" width=270 height=500></td>
+  <td><img src="screenshots/1.png" width=270 height=500></td>
+  <td><img src="screenshots/3.png" width=270 height=500></td>
   </tr>
  </table>
  
